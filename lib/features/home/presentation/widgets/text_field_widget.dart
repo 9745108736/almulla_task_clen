@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
-Widget TextFieldWidget({String? placeholder, int? minLine}) {
+Widget TextFieldWidget(
+    {String? placeholder,
+    int? minLine,
+    TextEditingController? textEditingController,
+    TextInputType? textInputType,
+    bool? enableParam}) {
   return TextField(
     maxLines: null,
+    enabled: enableParam ?? true,
+    controller: textEditingController,
     minLines: minLine ?? 1,
-    keyboardType: TextInputType.multiline,
+    keyboardType: textInputType ?? TextInputType.multiline,
     decoration: InputDecoration(
       contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       counterText: '',

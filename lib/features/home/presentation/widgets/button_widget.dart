@@ -1,3 +1,4 @@
+import 'package:alimulla_task/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatefulWidget {
@@ -40,7 +41,7 @@ class _CustomButtonState extends State<CustomButton> {
           shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(widget.radius),
           ),
-          color: Colors.white12,
+          color: kGoodPurple,
           child: widget.isProgress
               ? buildLoader()
               : Text(widget.label,

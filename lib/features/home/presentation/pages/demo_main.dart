@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
-
 import '../../../../core/utils/colors.dart';
-import '../widgets/button_widget.dart';
-import '../widgets/space_widget.dart';
-import '../widgets/text_field_widget.dart';
 import '../widgets/text_widget.dart';
-import 'demo_home.dart';
-import 'demo_todo.dart';
+import 'encrypt/demo_encrypt.dart';
+import 'todo/demo_todo.dart';
 
 class DemoMainPage extends StatefulWidget {
   const DemoMainPage({Key? key}) : super(key: key);
@@ -19,10 +14,10 @@ class DemoMainPage extends StatefulWidget {
 class _DemoMainPageState extends State<DemoMainPage> {
   int _selectedIndex = 0;
 
-  List<Widget> _widgetOptions = <Widget>[
-    DemoHomePage(),
+  final List<Widget> _widgetOptions = <Widget>[
+    DemoEncryptPage(),
     TodoPage(),
-    DemoHomePage(),
+    DemoEncryptPage(),
   ];
 
   @override
@@ -30,7 +25,8 @@ class _DemoMainPageState extends State<DemoMainPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kGoodPurple,
-        title: DemoRobotoTextWidget(text: "Welcome user",fontColor: kGoodMidGray),
+        title:
+            DemoRobotoTextWidget(text: "Welcome user", fontColor: kGoodMidGray),
       ),
       drawer: Drawer(
         backgroundColor: Colors.white,
@@ -45,7 +41,7 @@ class _DemoMainPageState extends State<DemoMainPage> {
             ),
             const Divider(),
             ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.home,
               ),
               title: const Text('Change Language'),
@@ -54,7 +50,7 @@ class _DemoMainPageState extends State<DemoMainPage> {
               },
             ),
             ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.logout,
               ),
               title: const Text('Logout'),
@@ -71,7 +67,7 @@ class _DemoMainPageState extends State<DemoMainPage> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         selectedItemColor: kGoodPurple,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: ('Encryption'),
@@ -80,7 +76,7 @@ class _DemoMainPageState extends State<DemoMainPage> {
               color: kGoodPurple,
             ),
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(
               Icons.check,
               color: kGoodLightGray,

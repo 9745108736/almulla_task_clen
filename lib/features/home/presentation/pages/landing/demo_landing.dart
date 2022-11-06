@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/sign_in_with_button.dart';
-import '../widgets/text_widget.dart';
+import '../../widgets/sign_in_with_button.dart';
+import '../../widgets/text_widget.dart';
 
 class DemoLandingPage extends StatefulWidget {
   const DemoLandingPage({Key? key}) : super(key: key);
