@@ -3,7 +3,7 @@ import 'package:hive_flutter/adapters.dart';
 
 import 'features/home/presentation/pages/encrypt/encrypt_test.dart';
 import 'features/home/presentation/pages/landing/demo_landing.dart';
-import 'features/home/presentation/pages/todo/todo.dart';
+import 'features/home/presentation/pages/todo/model/todo.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 

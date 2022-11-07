@@ -5,7 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../../../../../main.dart';
 import '../../widgets/button_widget.dart';
 import '../../widgets/text_widget.dart';
-import 'todo.dart';
+import 'model/todo.dart';
 import 'demo_add_task.dart';
 
 class TodoPage extends StatefulWidget {
@@ -22,15 +22,13 @@ class _TodoPageState extends State<TodoPage> {
       body: _body(),
       floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // addNewBook(context);
-            // return;
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => AddTaskPage()),
             );
           },
-          child: Icon(Icons.add),
-          backgroundColor: kGoodPurple),
+          backgroundColor: kGoodPurple,
+          child: const Icon(Icons.add)),
     );
   }
 
@@ -58,9 +56,9 @@ class _TodoPageState extends State<TodoPage> {
                       child: Container(
                         child: ListTile(
                           leading: DemoRobotoTextWidget(
-                              text: "${result?.todo_task_name}", fontSize: 15),
+                              text: "${result?.todo_task_name}", fontSize: 25),
                           trailing: DemoRobotoMonoTextWidget(
-                              text: "${result?.todo_date}"),
+                              text: "${result?.todo_date}",fontSize: 18),
                         ),
                         decoration: myBoxDecoration(),
                       ),
